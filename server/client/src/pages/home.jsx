@@ -1,7 +1,7 @@
 // src/pages/Home.js
 import { Routes, Route, Link } from 'react-router-dom';
-import DashboardPage from '../pages/auth/DashboardPage'; // Adjust the import path if needed
-import ShopHome from '../pages/shopping-view/home'; // Create and adjust the path for ShopHome component
+// import DashboardPage from '../pages/auth/DashboardPage'; // Adjust the import path if needed
+import ShoppingListing from './../pages/shopping-view/listing';
 
 function Home({ isAuthenticated }) {
   return (
@@ -13,7 +13,7 @@ function Home({ isAuthenticated }) {
         {isAuthenticated ? (
           <>
             <Link to="/shop/home">Go to Shopping Home</Link>
-            <Link to="/dashboard">Go to Dashboard</Link>
+            
           </>
         ) : (
           <>
@@ -25,16 +25,16 @@ function Home({ isAuthenticated }) {
 
       {/* Define Routes */}
       <Routes>
-        <Route path="/shop/home" element={<ShopHome />} />
+        <Route path="/shop/listing" element={<ShoppingListing/>} />
         {/* Dashboard is available to all authenticated users */}
-        {isAuthenticated && <Route path="/dashboard" element={<DashboardPage />} />}
+       
       </Routes>
 
       {/* Render Dashboard directly on the main Home page if authenticated */}
       {isAuthenticated && (
         <div className="dashboard-section">
-          <h2>Your Dashboard</h2>
-          <DashboardPage />
+          
+         
         </div>
       )}
     </div>

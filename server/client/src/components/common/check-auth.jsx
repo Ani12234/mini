@@ -71,7 +71,7 @@ function CheckAuth({ isAuthenticated, user, children }) {
 
   // If the user is authenticated and tries to access login or signup page, redirect to the appropriate page
   if (isAuthenticated && (location.pathname.includes('/auth/login') || location.pathname.includes('/auth/signup'))) {
-    return user?.role === 'admin' ? <Navigate to="/admin/dashboard" replace /> : <Navigate to="/shop/home" replace />;
+    return user?.role === 'admin' ? <Navigate to="/admin/dashboard" replace /> : <Navigate to="/shop/listing" replace />;
   }
 
   // If the user is authenticated but trying to access an admin route with a non-admin role, redirect to unauthorized page
@@ -80,7 +80,7 @@ function CheckAuth({ isAuthenticated, user, children }) {
   }
 
   // If the user is authenticated and tries to access shop routes but is an admin, redirect to admin dashboard
-  if (isAuthenticated && user?.role === 'admin' && location.pathname.includes('/shop')) {
+  if (isAuthenticated && user?.role === 'admin' && location.pathname.includes('/shop/listing')) {
     return <Navigate to="/admin/dashboard" replace />;
   }
 

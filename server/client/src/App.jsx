@@ -187,7 +187,7 @@ import Unauth from './pages/unauth-page';
 import LoginPage from './pages/auth/LoginPage';
 import SignUpPage from './pages/auth/SignUpPage';
 import EmailVerificationPage from './pages/auth/EmailVerificationPage';
-import DashboardPage from './pages/auth/DashboardPage';
+// import DashboardPage from './pages/auth/DashboardPage';
 import ForgotPasswordPage from './pages/auth/ForgotPasswordPage';
 import ResetPasswordPage from './pages/auth/ResetPasswordPage';
 import AdminDashboard from './pages/admin-view/dashboard';
