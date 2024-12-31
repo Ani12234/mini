@@ -6,7 +6,7 @@ import ShoppingListing from './../pages/shopping-view/listing';
 function Home({ isAuthenticated }) {
   return (
     <div className="home-container">
-      <h1>Welcome to Our Platform</h1>
+      <h1>Welcome to Ou Platform</h1>
       <p>Explore our services:</p>
 
       <div className="options">
